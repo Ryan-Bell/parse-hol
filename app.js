@@ -1,25 +1,25 @@
 'use strict';
 
-function rawToHOL(raw){
-	if(!raw) return [];
-	raw = CSVToArray(raw).slice(1);
-	raw.unshift(['name', 'date']);
-	raw = arrayToJSON(raw);
-	let dates = [];
-	raw.forEach(function(row){
-		dates.push(new Date(row.date));
+const fs = require('fs');
+rawToHOL(fs.readFileSync('./test.hol'));
+
+function rawToHOL(raw, strip=true){
+	if(!raw) return {};
+	raw = CSVToArray(raw);
+	let obj = {};
+	let location;
+	raw.map((row) => {
+		if(row.length === 1){
+			location = row[0].match(/\[(.*?)\]/)[0];	
+			return obj[location] = {};
+		}
+		if(strip) row = row.map((v) => { return v.trim(); });
+		obj[location][row[0]] = row[1];
+		
 	});
-	return dates;
+	console.log(JSON.stringify(obj,2,2));
+	return obj;
 }
-
-function arrayToJSON(array){
-	let raw = {
-		metaData : array[0].map(v=>{return {name:v};}),
-		rows : array.slice(1)
-	};
-	return normalize(raw);
-}
-
 
 function CSVToArray(strData, delim = ',') {
 	let objPattern = new RegExp((
