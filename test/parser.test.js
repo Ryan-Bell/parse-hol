@@ -67,7 +67,21 @@ describe('Parse function', function(){
 		});
 
 		it('should handle locations with special characters', function(){
-
+			//output will come from special file
+			output = app.parse(fs.readFileSync('./test/special.hol', 'utf8'));
+			let expectedLocations = [
+				'**lo*cat*ion**',
+				'lo(cat)ion',
+				'lo/cat/ion',
+				'lo.cat.ion',
+				'lo@cat@ion',
+				'lo#c%a^t$i&on',
+				'lo[cat]ion',
+				'lo-cat-ion',
+				'lo_cat_ion',
+				'lo cat\tion',
+			];
+			expect(output).to.have.all.keys(expectedLocations);	
 		});
 
 		it('should group the holidays under the correct location', function(){

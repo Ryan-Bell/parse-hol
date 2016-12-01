@@ -1,0 +1,29 @@
+[**lo*cat*ion**] 1
+Holiday    , 2010/12/20
+
+[lo(cat)ion] 1
+Holiday    , 2010/12/20
+
+[lo/cat/ion] 1
+Holiday    , 2010/12/20
+
+[lo.cat.ion] 1
+Holiday    , 2010/12/20
+
+[lo@cat@ion] 1
+Holiday    , 2010/12/20
+
+[lo#c%a^t$i&on] 1
+Holiday    , 2010/12/20
+
+[lo[cat]ion] 1
+Holiday    , 2010/12/20
+
+[lo-cat-ion] 1
+Holiday    , 2010/12/20
+
+[lo_cat_ion] 1
+Holiday    , 2010/12/20
+
+[lo cat\tion] 1
+Holiday    , 2010/12/20
