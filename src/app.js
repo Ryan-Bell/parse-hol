@@ -42,8 +42,12 @@ function CSVToArray(strData, delim = ',') {
 	return arrData;
 }
 
+module.exports = parse;
 
-module.exports = {
-	parse: parse,
-	_csvtoarray: CSVToArray
-};
+//expose private functions for testing
+if(process.env.npm_config_expose){
+	module.exports = {
+		parse: parse,
+		_csvtoarray: CSVToArray
+	};
+}
