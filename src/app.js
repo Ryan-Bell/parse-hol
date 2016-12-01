@@ -43,4 +43,7 @@ function CSVToArray(strData, delim = ',') {
 }
 
 
-module.exports = parse;
+module.exports = {
+	parse: parse,
+	_csvtoarray: CSVToArray
+};
