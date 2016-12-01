@@ -4,7 +4,9 @@
   "description": "Parses .HOL Outlook Holiday files",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec test/*.test.js",
+		"test-cov": "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
+		"view-cov": "firefox ./reports/coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/RyanofRIT/parse-hol/issues"
   },
-  "homepage": "https://github.com/RyanofRIT/parse-hol#readme"
+  "homepage": "https://github.com/RyanofRIT/parse-hol#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
 }
