@@ -1,23 +1,20 @@
 'use strict';
-
 const fs = require('fs');
-rawToHOL(fs.readFileSync('./test.hol'));
 
-function rawToHOL(raw, strip=true){
+function parse(raw, strip=true){
 	if(!raw) return {};
 	raw = CSVToArray(raw);
 	let obj = {};
 	let location;
 	raw.map((row) => {
 		if(row.length === 1){
-			location = row[0].match(/\[(.*?)\]/)[0];	
+			location = row[0].match(/\[(.*?)\]/)[1];	
 			return obj[location] = {};
 		}
 		if(strip) row = row.map((v) => { return v.trim(); });
 		obj[location][row[0]] = row[1];
 		
 	});
-	console.log(JSON.stringify(obj,2,2));
 	return obj;
 }
 
@@ -46,6 +43,4 @@ function CSVToArray(strData, delim = ',') {
 }
 
 
-module.exports = {
-	rawToHOL: rawToHOL
-}; 
+module.exports = parse;
