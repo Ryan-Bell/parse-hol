@@ -26,8 +26,26 @@ describe('CSVtoArray', function(){
 
 describe('Parse function', function(){
 	describe('#whitespace', function(){
-		it('should strip whitespace by default');
-		it('should allow whitespace to be kept');
+		let input;
+		beforeEach(function(){
+			input = '[location]\n\ hol1\ ,\ date1\ \n\thol2\t,\tdate2\t';
+		});
+
+		it('should strip whitespace by default', function(){
+			let expected = {'location' : {
+												'hol1' : 'date1',
+												'hol2' : 'date2'
+											}};	
+			expect(app.parse(input)).to.deep.equal(expected);
+		})
+
+		it('should allow whitespace to be kept', function(){
+			let expected = {'location' : {
+												'\ hol1\ '  : '\ date1\ ',
+												'\	hol2\	' : '\	date2\	'
+											}};	
+			expect(app.parse(input, false)).to.deep.equal(expected);
+		});
 	});
 	describe('#output format', function(){
 		it('should return an object');
