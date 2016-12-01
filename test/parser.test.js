@@ -13,15 +13,6 @@ describe('api', function(){
 	});
 });
 
-describe('CSVtoArray', function(){
-	//TODO more tests
-	describe('#empty values', function(){
-		it('should empty lines');
-		it('should skip lines with spaces or tabs');
-		it('should skip lines with commas but empty vals');
-		it('should skip lines with commas but spaces/tab vals');
-	});
-});
 
 describe('Parse function', function(){
 	describe('#whitespace', function(){
