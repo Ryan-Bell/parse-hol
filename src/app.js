@@ -7,6 +7,7 @@ function parse(raw, strip=true){
 	let obj = {};
 	let location;
 	raw.map((row) => {
+		if (!row[0]) return;
 		if(row.length === 1){
 			location = row[0].match(/\[(.*?)\]/)[1];	
 			return obj[location] = {};
