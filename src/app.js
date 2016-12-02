@@ -12,7 +12,8 @@ function parse(raw, strip=true){
 			return obj[location] = {};
 		}
 		if(strip) row = row.map((v) => { return v.trim(); });
-		obj[location][row[0]] = row[1];
+		obj[location][row[0]] =  obj[location][row[0]] || [];
+		obj[location][row[0]].push(row[1]);
 		
 	});
 	return obj;

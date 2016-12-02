@@ -23,16 +23,16 @@ describe('Parse function', function(){
 
 		it('should strip whitespace by default', function(){
 			let expected = {'location' : {
-												'hol1' : 'date1',
-												'hol2' : 'date2'
+												'hol1' : ['date1'],
+												'hol2' : ['date2']
 											}};	
 			expect(app.parse(input)).to.deep.equal(expected);
 		})
 
 		it('should allow whitespace to be kept', function(){
 			let expected = {'location' : {
-												'\ hol1\ '  : '\ date1\ ',
-												'\	hol2\	' : '\	date2\	'
+												'\ hol1\ '  : ['\ date1\ '],
+												'\	hol2\	' : ['\	date2\	']
 											}};	
 			expect(app.parse(input, false)).to.deep.equal(expected);
 		});
@@ -50,6 +50,7 @@ describe('Parse function', function(){
 		});
 
 		it('should return an object', function(){
+			console.log(output);
 			expect(output).to.be.an('object');
 		});
 
@@ -83,7 +84,7 @@ describe('Parse function', function(){
 			let expectedKeyCount = {
 				k0: 15,
 				k1: 13,
-				k2: 11,
+				k2: 6,
 			};
 			let actualKeyCount = {
 				k0: Object.keys(output[k0]).length,
@@ -94,7 +95,7 @@ describe('Parse function', function(){
 		});
 
 		it('should not convert the dates to date objects', function(){
-			expect(output[expectedKeys[0]]['Christmas']).to.be.a('string');
+			expect(output[expectedKeys[0]]['Christmas'][0]).to.be.a('string');
 		});
 	});	
 });
