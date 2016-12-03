@@ -1,11 +1,11 @@
 {
   "name": "parse-hol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parses .HOL Outlook Holiday files",
   "main": "src/app.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec",
-    "cover" : "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*.test.js || true"
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*.test.js || true"
   },
   "repository": {
     "type": "git",
