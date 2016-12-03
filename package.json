@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --reporter spec test/*.test.js",
 		"test-cov": "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
+	  	"cover" : "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
 		"view-cov": "firefox ./reports/coverage/lcov-report/index.html"
   },
   "repository": {
