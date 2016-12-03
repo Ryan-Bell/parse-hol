@@ -1,13 +1,14 @@
+--- 
+after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+cache: 
+  directories: 
+    - node_modules
 language: node_js
-node_js:
+node_js: 
   - "6.0"
   - "6.1"
   - "6.2"
-sudo: false
-cache:
-  directories:
-    - node_modules
 script: 
-	- npm test --expose
-	- npm run cover --expose
-after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+  - "npm test --expose"
+  - "npm run cover --expose"
+sudo: false
