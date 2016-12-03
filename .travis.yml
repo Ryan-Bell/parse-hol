@@ -8,6 +8,6 @@ cache:
   directories:
     - node_modules
 script: 
-	- npm run test --expose
+	- npm test --expose
 	- npm run cover --expose
 after_script: "cat reports/coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"

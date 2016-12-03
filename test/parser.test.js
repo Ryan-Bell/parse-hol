@@ -50,7 +50,6 @@ describe('Parse function', function(){
 		});
 
 		it('should return an object', function(){
-			console.log(output);
 			expect(output).to.be.an('object');
 		});
 
