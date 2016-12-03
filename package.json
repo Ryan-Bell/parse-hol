@@ -5,9 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "test": "mocha --reporter spec test/*.test.js",
-		"test-cov": "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
-	  	"cover" : "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
-		"view-cov": "firefox ./reports/coverage/lcov-report/index.html"
+    "test-cov": "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
+    "cover": "istanbul cover --dir ./reports/coverage --report lcov ./node_modules/.bin/_mocha -- --reporter spec test/*.test.js",
+    "view-cov": "firefox ./reports/coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/RyanofRIT/parse-hol#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   }
