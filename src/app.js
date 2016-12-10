@@ -9,7 +9,7 @@ function parse(raw, strip=true){
 	raw.map((row) => {
 		if (!row[0]) return;
 		if(row.length === 1){
-			location = row[0].match(/\[([^\[\]]*|[^\[\]]*\[[^\[\]]*\][^\[\]]*)?\]/)[1];	
+			location = row[0].match(/\[(.*)\]/)[1];	
 			return obj[location] = {};
 		}
 		if(strip) row = row.map((v) => { return v.trim(); });
