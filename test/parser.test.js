@@ -70,7 +70,6 @@ describe('Parse function', function(){
 				'lo[cat]ion',
 				'lo-cat-ion',
 				'lo_cat_ion',
-				'lo cat\tion',
 			];
 			expect(output).to.have.all.keys(expectedLocations);	
 		});
