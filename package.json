@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RyanofRIT/parse-hol.git"
+    "url": "git+https://github.com/Ryan-Bell/parse-hol.git"
   },
   "keywords": [
     "parse",
@@ -20,9 +20,9 @@
   "author": "Ryan Bell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RyanofRIT/parse-hol/issues"
+    "url": "https://github.com/Ryan-Bell/parse-hol/issues"
   },
-  "homepage": "https://github.com/RyanofRIT/parse-hol#readme",
+  "homepage": "https://github.com/Ryan-Bell/parse-hol#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",

@@ -1,8 +1,8 @@
 #parse-hol  
 Microsoft .hol parser  
 
-[![Build Status](https://travis-ci.org/RyanofRIT/parse-hol.svg?branch=master)](https://travis-ci.org/RyanofRIT/parse-hol)
-[![Coverage Status](https://coveralls.io/repos/github/RyanofRIT/parse-hol/badge.svg?branch=master)](https://coveralls.io/github/RyanofRIT/parse-hol?branch=master)
+[![Build Status](https://travis-ci.org/Ryan-Bell/parse-hol.svg?branch=master)](https://travis-ci.org/Ryan-Bell/parse-hol)
+[![Coverage Status](https://coveralls.io/repos/github/Ryan-Bell/parse-hol/badge.svg?branch=master)](https://coveralls.io/github/Ryan-Bell/parse-hol?branch=master)
 
 Install
 -------
